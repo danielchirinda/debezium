@@ -80,7 +80,7 @@ import io.debezium.util.Clock;
 public class MySqlReadOnlyIncrementalSnapshotChangeEventSource<T extends DataCollectionId> extends AbstractIncrementalSnapshotChangeEventSource<MySqlPartition, T> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(MySqlReadOnlyIncrementalSnapshotChangeEventSource.class);
-    private static final String SHOW_MASTER_STMT = "SHOW MASTER STATUS";
+    private static final String SHOW_MASTER_STMT = "SHOW BINARY LOG STATUS";
 
     public MySqlReadOnlyIncrementalSnapshotChangeEventSource(RelationalDatabaseConnectorConfig config,
                                                              JdbcConnection jdbcConnection,
