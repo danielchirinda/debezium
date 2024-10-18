@@ -237,7 +237,7 @@ public class MySqlConnection extends JdbcConnection {
      */
     public String knownGtidSet() {
         try {
-            return queryAndMap("SHOW MASTER STATUS", rs -> {
+            return queryAndMap("SHOW BINARY LOG STATUS", rs -> {
                 if (rs.next() && rs.getMetaData().getColumnCount() > 4) {
                     return rs.getString(5); // GTID set, may be null, blank, or contain a GTID set
                 }
