@@ -71,7 +71,7 @@ import io.debezium.util.Clock;
  */
 public class MySqlReadOnlyIncrementalSnapshotChangeEventSource extends BinlogReadOnlyIncrementalSnapshotChangeEventSource<MySqlPartition, MySqlOffsetContext> {
 
-    private static final String SHOW_MASTER_STMT = "SHOW MASTER STATUS";
+    private static final String SHOW_MASTER_STMT = "SHOW BINARY LOG STATUS";
 
     public MySqlReadOnlyIncrementalSnapshotChangeEventSource(MySqlConnectorConfig config,
                                                              JdbcConnection jdbcConnection,
