@@ -624,7 +624,7 @@ public class MySqlConnectorIT extends AbstractConnectorTest {
                         connection.print(rs);
                     }
                 });
-                connection.query("SHOW MASTER STATUS", positionAfterUpdate::readFromDatabase);
+                connection.query("SHOW BINARY LOG STATUS", positionAfterUpdate::readFromDatabase);
             }
         }
 
